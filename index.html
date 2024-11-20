@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puyeng</title>
+    <link rel="icon" href="laler.jpg">
+    <link rel="stylesheet" href="index.css"
+</head>
+<body>
+    
+    <div class="arrow-down">⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️⬇️</div>
+    
+    <header>
+        <h1>Welcome To My WEB</h1>
+    </header>
+
+    <nav>
+        <button id="hamburger" onclick="toggleMenu()">☰</button>
+        <ul id="nav-links">
+            <li><a href="#MyPurpose">My Purpose</a></li>
+            <li><a href="#aboutme">About Me</a></li>
+        </ul>
+    </nav>
+
+   
+
+    <main>
+        <section id="MyPurpose">
+            <h2>My Course</h2>
+            <p>Disini tujuan saya adalah mahir dalam menggunakan HTML, CSS, dan JavaScript. Tugas ini bertujuan untuk memperkenalkan cara menggunakan struktur HTML dasar dan penggunaan CSS untuk tampilan web agar lebih indah.</p>
+            <P>Setelah memperlajari ketiga tersebut saya harap dapat mengimplemestasikan ke arah yang benar :v</P>
+            <br>
+            <h3>Di RevoU ini Saya akan belajar:</h3>
+
+            <!-- Responsive Image -->
+            <picture>
+                <source media="(max-width: 600px)" srcset="images/small.jpg">
+                <source media="(min-width: 601px)" srcset="images/large.jpg">
+                <img src="images/default.jpg" alt="Learning journey image" style="width: 100%; border-radius: 8px;">
+            </picture>
+
+            <!-- Asymmetrical Grid -->
+            <div class="grid">
+                <div class="grid-item">
+                    <img src="html.png" alt="HTML" style="width:50px;height:50px;">
+                    <p>HTML</p>
+                </div>
+                <div class="grid-item">
+                    <img src="css.png" alt="CSS" style="width:50px;height:50px;">
+                    <p>CSS</p>
+                </div>
+                <div class="grid-item">
+                    <img src="jacasript.png" alt="JavaScript" style="width:50px;height:50px;">
+                    <p>JavaScript</p>
+                </div>
+            </div>
+        </section>
+
+        
+        <div class="container">
+            <p>Jika kalian berminat silahkan login di bawah ini:</p>
+            <form class="form" id="form" action="/submit" method="POST">
+                <br>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+                <input type="submit" value="Submit">
+            </form>
+
+            <center>
+                <p>Jika Belum memiliki akun silahkan daftar disini</p>
+                <button onclick="alert('Daftar Akun!')">Daftar</button>
+            </center>
+        </div>
+        <p>Info Lebih Lanjut Hubungi Nomor Dibawah Ini</p>
+        <br>
+        <p>Abdul  +6293456789011</p>
+        <p>Rohmat +6222098276473</p>
+
+        <br>
+
+
+        <section id="aboutme">
+            <h2>About Me</h2>
+            <p>Anda dapat menghubungi saya melalui email di <a href="mailto:ivanfauzan135@gmail.com">ivanfauzan135@gmail.com</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Oktober 2024 Halaman Web Sederhana. Semua Hak tidak dilindungi (T_T).</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.style.display = navLinks.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+
+</body>
+</html>

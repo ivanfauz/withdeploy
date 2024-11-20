@@ -1,0 +1,221 @@
+/* Custom Font */
+@font-face {
+    font-family: 'CustomFont';
+    src: url('CustomFont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* *(apalah kurang tahu pokoknya untuk keseluruhan pake itu) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'CustomFont', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header dan Navigation */
+header, nav, footer {
+    padding: 1em;
+    color: white;
+}
+
+header {
+    background-color: #0088ea;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    background-color: rgb(135, 213, 239);
+    text-align: left;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: circle;
+}
+
+#nav-links {
+    display: flex;
+    list-style: disc outside;
+}
+
+#nav-links li {
+    margin: 0 1em;
+}
+
+#nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+#hamburger {
+    display: flex;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: rgb(5, 0, 0);
+    cursor: pointer;
+}
+
+/* Main */
+main {
+    padding: 2em;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    margin-bottom: 2em;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Grid  */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    justify-content: center;
+}
+
+.grid-item {
+    background-color: #f4f4f4;
+    padding: 1em;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+/*container style*/
+.container {
+    width: 300px;
+    padding: 20px;
+    background-color: #cfd3fc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Style */
+.form label {
+    margin: 0.5em 0 0.2em;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"] {
+    padding: 0.8em;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-width: 300px;
+}
+
+.form input[type="submit"] {
+    background-color: #0088ea;
+    color: white;
+    padding: 0.8em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.form input[type="submit"]:hover {
+    background-color: #a9cde6;
+}
+
+/* Footer */
+footer {
+    background-color: #9bbfd9;
+    text-align: center;
+    padding: 1em;
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #nav-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #hamburger {
+        display: block;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animasinya */
+@keyframes moveDown {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+    100% { transform: translateY(0); }
+}
+
+.arrow-down {
+    font-size: 2em;
+    color: #a3cfee;
+    text-align: center;
+    animation: moveDown 0.5s ease-in-out infinite;
+    margin-top: 20px;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 1em;
+    justify-content: center;
+}
+
+.grid-item {
+    background-color: #f4f4f4;
+    padding: 1em;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
